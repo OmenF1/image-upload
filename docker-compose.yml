@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  upload-service:
+    build: .
+    container_name: upload-service
+    ports:
+      - "3000:3000"
+    volumes:
+      - upload-data:/app/uploads
+
+volumes:
+  upload-data:
